@@ -42,8 +42,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
-  //Code Here
-
+  var reversedLooper = function(arr) {
+  	arr.reverse();
+  	for (var i = 0; i < arr.length; i++) {
+  		alert(arr[i]);
+  	}
+  }
 
 //Next Problem
 
@@ -51,7 +55,15 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
-  //Code Here
+  var evenFinder = function(arr) {
+  	var newArr = [];
+  	for (var i = 0; i < arr.length; i++) {
+  		if (arr[i] % 2 === 0) {
+  			newArr.push(arr[i]);
+  		}
+  		console.log(newArr);
+  	}
+  }
 
 
 //Next problem
@@ -59,13 +71,23 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var evens = [];
-var odds = []
+var odds = [];
+var newArr = [evens, odds];
 //Write a function called divider that is given three arguments, nums, evens, and odds.
 //Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
 
 
 
-  //Code Here
+  var divider = function(nums, evens, odds) {
+  	for (var i = 0; i < nums.length; i++) {
+  		if (nums[i] % 2 === 0) {
+  			evens.push(nums[i]);
+  		} else {
+  			odds.push(nums[i]);
+  		}
+  	}
+  	console.log(newArr);
+  }
 
 
 //Next Problem
