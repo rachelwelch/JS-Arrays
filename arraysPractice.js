@@ -97,9 +97,18 @@ var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-//Above your given a function that will return a random number between 0 and 30, and an array full or numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
+//Above your given a function that will return a random number between 0 and 30, and an array full or numbers. 
+// Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
-  //Code Here
+  var finder = function(arr) {
+  	for (var i = 0; i < arr.length; i++) {
+  		if (arr[i] === getRandomArbitrary()) {
+  			return true;
+  		} else {
+  			return false;
+  		}
+  	}
+  }
 
 
 //Next problem
@@ -109,7 +118,9 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
+  var reverse = function(a) {
+  	return a.split('').reverse().join('');
+  }
 
 
 //Next Problem
@@ -126,12 +137,35 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   myGroceryList then return the new, updated grocery list.
 */
 
-  //Code Here
-
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+
+  var removeItem = function(arr, remove) {
+  	for (var i = 0; i < arr.length; i++) {
+  		if (arr[i] === remove) {
+  			arr.splice(i, 1);
+  		}
+  		console.log(arr);
+  	}
+  }
+
+  removeItem(myGroceryList, 'pizza');
+
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
+   var addItem = function(arr, add) {
+   	var isPresent = false;
+   	 for (var i = 0; i < arr.length; i++) {
+   	 	if (arr[i] === add) {
+   	 		isPresent = true;
+   	 	}
+   	 }
+   	 if (!isPresent) {
+   	 	arr.push(add);
+   	 }
+   	 return arr;
+   }
 
+   addItem(myGroceryList, 'Jerky');
 
 //Next Problem
 
