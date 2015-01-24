@@ -173,7 +173,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
+  var maker = function() {
+  	var result = [];
+	for (var i = 1; i !== 126; ++i) result.push(i)
+	console.log(result);
+  }
 
 
 
@@ -184,7 +188,27 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
+//   var addTen = function(arr) {
+//   	var newArr = [];
+//   	for (var i = 0; i < arr.length; i++) {
+//   		if (arr[i] !== isNaN) {
+//   			newArr.push(arr[i] + 10);
+//   		} else {
+//   			arr.parseInt(arr[i]);
+//   			newArr.push(arr[i] + 10);
+//   		}
+//   		return newArr;
+//   	}
+// }
+
+var addTen = function(arr) {
+	var newArr = [];
+	for (var i = 0; i < arr.length; i++) {
+		var newNum = arr.parseInt(arr[i] + 10);
+		newArr.push(newNum);
+	}
+	return newArr;
+}
 
 
 
@@ -205,7 +229,13 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-  //Code Here
+  var longArr = function(arr1, arr2) {
+  	if (arr1 > arr2) {
+  		return arr1;
+  	} else {
+  		return arr2;
+  	}
+  }
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -213,4 +243,18 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-  //Code Here
+  var both = function(arr1, arr2) {
+  	var same = [];
+  	for (var i = 0; i < arr1.length; i++) {
+  		for (var i = 0; i < arr2.length; i++) {
+  			if (arr1[i] === arr2[i]) {
+  				same.push(i);
+  			}
+  		}
+  		return same;
+  	}
+  }
+
+
+
+
