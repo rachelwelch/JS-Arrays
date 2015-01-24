@@ -194,7 +194,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //   		if (arr[i] !== isNaN) {
 //   			newArr.push(arr[i] + 10);
 //   		} else {
-//   			arr.parseInt(arr[i]);
+//   			parseInt(arr[i]);
 //   			newArr.push(arr[i] + 10);
 //   		}
 //   		return newArr;
@@ -204,7 +204,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 var addTen = function(arr) {
 	var newArr = [];
 	for (var i = 0; i < arr.length; i++) {
-		var newNum = arr.parseInt(arr[i] + 10);
+		var newNum = parseInt(arr[i] + 10);
 		newArr.push(newNum);
 	}
 	return newArr;
