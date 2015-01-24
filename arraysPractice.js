@@ -104,9 +104,8 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
   	for (var i = 0; i < arr.length; i++) {
   		if (arr[i] === getRandomArbitrary()) {
   			return true;
-  		} else {
-  			return false;
   		}
+  		return false;
   	}
   }
 
@@ -165,8 +164,6 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
    	 return arr;
    }
 
-   addItem(myGroceryList, 'Jerky');
-
 //Next Problem
 
 
@@ -175,7 +172,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   var maker = function() {
   	var result = [];
-	for (var i = 1; i !== 126; ++i) result.push(i)
+	for (var i = 1; i !== 216; ++i) {
+    result.push(i)
+	}
 	console.log(result);
   }
 
@@ -188,26 +187,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-//   var addTen = function(arr) {
-//   	var newArr = [];
-//   	for (var i = 0; i < arr.length; i++) {
-//   		if (arr[i] !== isNaN) {
-//   			newArr.push(arr[i] + 10);
-//   		} else {
-//   			parseInt(arr[i]);
-//   			newArr.push(arr[i] + 10);
-//   		}
-//   		return newArr;
-//   	}
-// }
 
-var addTen = function(arr) {
-	var newArr = [];
+var addTen = function(arr){
 	for (var i = 0; i < arr.length; i++) {
-		var newNum = parseInt(arr[i] + 10);
-		newArr.push(newNum);
+		arr[i] = parseInt(arr[i]) + 10;
 	}
-	return newArr;
+	return arr;
 }
 
 
@@ -230,10 +215,12 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   var longArr = function(arr1, arr2) {
-  	if (arr1 > arr2) {
+  	if (arr1.length > arr2.length) {
   		return arr1;
-  	} else {
+  	} else if (arr1.length < arr2.length) {
   		return arr2;
+  	} else {
+  		return null;
   	}
   }
 
